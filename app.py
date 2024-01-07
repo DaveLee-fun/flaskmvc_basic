@@ -19,7 +19,6 @@ login_manager.login_view = 'login'
 # 라우팅 설정
 setup_routes(app)
 
-if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()
-    app.run()
+# 데이터베이스 테이블 생성
+with app.app_context():
+    db.create_all()
